@@ -188,17 +188,28 @@ public class ArrCharOps {
    public static int compareTo(String str1, String str2) {
     int len1 = str1.length();
     int len2 = str2.length();
-    int lim = Math.min(len1, len2);
-
-    for (int i = 0; i < lim; i++) {
+    int minLen = Math.min(len1, len2);
+    if (str1 == null || str2 == null || str1.isEmpty() || str2.isEmpty()) {
+            return -2; 
+        }
+    for (int i = 0; i < minLen; i++) {
         char c1 = str1.charAt(i);
         char c2 = str2.charAt(i);
-        if (c1 != c2) {
-            return Character.compare(c1, c2); 
-        }
+
+        if (c1 < c2) 
+            return -1;
+        if (c1 > c2) 
+            return 1;
     }
-    return Integer.compare(len1, len2); 
+
+    if (len1 < len2) 
+        return -1;
+    if (len1 > len2) 
+        return 1;
+
+    return 0;
 }
+
 
 
 }
