@@ -105,20 +105,18 @@ public class ArrCharOps {
         }
         return -1;
     }
-
-    /* Returns an array which is the concatanation of the two given arrays.
-    */
     public static char[] concat(char[] arr1, char[] arr2) {
-        // Replace the following statement with your code
-        char [] arr3=new char[arr1.length+arr2.length];
-        for(int i=0;i<arr1.length;i++){
-            arr3[i]=arr1[i];
-        }
-        for(int j=0;j<arr2.length;j++){
-            arr3[arr3.length+1]=arr2[j];
-        }
-        return arr3;
+    char[] arr3 = new char[arr1.length + arr2.length];
+
+    for (int i = 0; i < arr1.length; i++) {
+        arr3[i] = arr1[i];
     }
+
+    for (int j = 0; j < arr2.length; j++) {
+        arr3[arr1.length + j] = arr2[j];  
+
+    return arr3;
+}
 
     /** Returns a new array that can be described as a sub-array of this array.
      *  The sub-array begins at the specified beginIndex and extends to the character at index endIndex - 1.
