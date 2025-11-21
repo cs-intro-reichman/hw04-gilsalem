@@ -105,18 +105,25 @@ public class ArrCharOps {
         }
         return -1;
     }
-    public static char[] concat(char[] arr1, char[] arr2) {
+    public static char[] concat(char[] arr1, char[] arr2) 
+    {
     char[] arr3 = new char[arr1.length + arr2.length];
 
     for (int i = 0; i < arr1.length; i++) {
         arr3[i] = arr1[i];
     }
 
-    for (int j = 0; j < arr2.length; j++) {
+    for (int j = 0; j < arr2.length; j++) 
+    {
         arr3[arr1.length + j] = arr2[j];  
-
+    }
     return arr3;
+    
 }
+
+
+
+
 
     /** Returns a new array that can be described as a sub-array of this array.
      *  The sub-array begins at the specified beginIndex and extends to the character at index endIndex - 1.
@@ -132,6 +139,7 @@ public class ArrCharOps {
 
         return arr1;
     }
+
 
      /** Returns a single integer that represents the given array. This integer is sometimes 
      *  referred to as the array's "hash code". Later in the course we'll explain what these 
